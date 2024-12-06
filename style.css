@@ -1,0 +1,193 @@
+/* 基本樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 設定全站背景色與文字色 */
+body, html {
+    height: 100%; /* 讓body和html高度佔滿頁面 */
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1; /* 淺灰色背景 */
+    color: #333; /* 深色文字 */
+    display: flex;
+    flex-direction: column; /* 設定頁面為縱向排列 */
+}
+
+/* Header樣式 */
+header {
+    background-color: #0088cc; /* 藍色背景 */
+    color: white; /* 白色文字 */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Header登入按鈕樣式 */
+header .btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 2px solid white; /* 邊框設為白色 */
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header .btn:hover {
+    background-color: white;
+    color: #0088cc; /* 滑鼠懸停時顯示白色背景，文字變藍 */
+}
+
+/* Navigation樣式 */
+nav {
+    background-color: #333; /* 深色背景 */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* 白色文字 */
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* 滑鼠懸停時顯示黃色 */
+}
+
+/* 搜尋區域樣式 */
+search {
+    display: flex;
+    justify-content: flex-start; /* 靠左顯示 */
+    margin: 20px 0;
+}
+
+search form {
+    display: flex;
+    align-items: center;
+    max-width: 600px; /* 限制搜尋框最大寬度 */
+    width: 100%; /* 自適應寬度 */
+    background-color: #ffffff; /* 背景為白色 */
+    border-radius: 25px; /* 圓角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    padding: 5px 20px;
+}
+
+search input[type="search"] {
+    width: 100%; /* 使輸入框自適應 */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px; /* 文字和按鈕間的間距 */
+    outline: none;
+}
+
+search input[type="search"]:focus {
+    border: 2px solid #0088cc; /* 當輸入框聚焦時顯示藍色邊框 */
+}
+
+search button {
+    padding: 10px 20px;
+    background-color: #0088cc; /* 藍色背景 */
+    color: white; /* 白色文字 */
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+search button:hover {
+    background-color: #005fa3; /* 滑鼠懸停時改變背景顏色 */
+}
+
+/* 主要內容區域 */
+section {
+    margin: 20px;
+    flex-grow: 1; /* 讓內容區域填滿剩餘空間 */
+}
+
+/* 小卡片樣式 */
+.d1-container {
+    display: flex; /* 使用 flexbox 排列 */
+    justify-content: flex-start; /* 靠左顯示 */
+    gap: 20px; /* 設定間距 */
+}
+
+/* 小卡片樣式 */
+.d1 {
+    display: flex; /* 使用 Flexbox 使卡片內部的內容左右顯示 */
+    justify-content: flex-start; /* 左對齊 */
+    align-items: center; /* 讓圖片和文字垂直置中 */
+    background-color: #ffffff; /* 白色背景 */
+    border-radius: 10px; /* 圓角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    padding: 15px;
+    width: 350px; /* 固定寬度，確保並排 */
+    height: 150px; /* 固定卡片的高度 */
+    overflow: hidden; /* 隱藏超出部分 */
+}
+
+/* 讓圖片與文字並排顯示 */
+.d1 img {
+    width: 70px; /* 圖片寬度 */
+    height: 70px; /* 圖片高度 */
+    object-fit: cover; /* 保持圖片比例並裁剪 */
+    border-radius: 8px; /* 圓角 */
+    margin-left: 15px; /* 文字與圖片之間的間距 */
+}
+
+.d1-1 {
+    flex-grow: 1; /* 讓文字部分自動擴展 */
+}
+
+.d1-1-h1 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.d1-1-p-1 {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.d1-1-p-2 a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #0088cc; /* 藍色連結 */
+    transition: color 0.3s ease;
+}
+
+.d1-1-p-2 a:hover {
+    color: #ff0000; /* 懸停時變深藍色 */
+}
+
+/* Footer樣式 */
+footer {
+    background-color: #333; /* 深色背景 */
+    color: white; /* 白色文字 */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
