@@ -4,33 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首頁</title>
-   <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
         <h2>無名X站</h2>
         <a class="btn btn-sm btn-outline-secondary" href="./login.html">登入</a>
-      </header>
-      
-      
-        <nav>
-          <ul>
+    </header>    
+
+    <nav>
+        <ul>
             <li><a href="./image.html">相簿</a></li>
             <li><a href="#">影音</a></li>
             <li><a href="#">網誌</a></li>
             <li><a href="#">哈啦</a></li>
-          </ul>
-        </nav>
+        </ul>
+    </nav>
 
-      <section>
+    <search>
+        <form action="#">
+            <input type="search" id="search" name="" />
+            <button type="submit">搜尋</button>
+        </form>
+    </search>
+
+    <section>
         <article>
-          <h1>標題</h1>
-          <p>內文</p>
+            <!-- 使用 flexbox 讓這兩個 d1 並排顯示 -->
+            <div class="d1-container">
+                <div class="d1">
+                    <div class="d1-1">
+                        <h1 class="d1-1-h1">暱稱：大帥哥</h1>
+                        <p class="d1-1-p-1">今天天氣真好，我還是這麼的帥</p>
+                        <p class="d1-1-p-2"><a href="#">繼續閱讀...</a></p>
+                    </div>
+                    <img src="./img/red.png" alt="Image Description">
+                </div>    
+
+                <div class="d1">
+                    <div class="d1-1">
+                        <h1 class="d1-1-h1">暱稱：大美女</h1>
+                        <p class="d1-1-p-1">今天天氣真好，我還是這麼的美</p>
+                        <p class="d1-1-p-2"><a href="#">繼續閱讀...</a></p>
+                    </div>
+                    <img src="./img/yellow.png" alt="Image Description">
+                </div>
+            </div>  
         </article>
-      </section>
-      
-      <footer>
+    </section>
+
+    <footer>
         <p>無名X站</p>
-      </footer>
+    </footer>
 </body>
 </html>
